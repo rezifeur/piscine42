@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrev.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nguintin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/05 17:05:15 by nguintin          #+#    #+#             */
-/*   Updated: 2017/09/13 14:30:22 by nguintin         ###   ########.fr       */
+/*   Created: 2017/09/13 14:12:40 by nguintin          #+#    #+#             */
+/*   Updated: 2017/09/13 14:12:41 by nguintin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrev(char *str)
-{
-	int tmp;
-	int b;
-	int c;
+int		ft_putchar(char c);
 
-	c = 0;
-	b = 0;
-	while (str[c])
-		c++;
-	c--;
-	while (b < c)
+void	ft_putnbr(int nb)
+{
+	if (nb < 0)
 	{
-		tmp = str[b];
-		str[b] = str[c];
-		str[c] = tmp;
-		c--;
-		b++;
+		ft_putchar('-');
+		if (nb == -2147483648)
+		{
+			nb = 147483648;
+			ft_putchar('2');
+			ft_putnbr(nb + '0');
+		}
+		nb = -nb;
 	}
-	return (str);
+	if (nb >= 10)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else
+	{
+		ft_putchar(nb + '0');
+	}
 }

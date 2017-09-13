@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrev.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nguintin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/05 17:05:15 by nguintin          #+#    #+#             */
-/*   Updated: 2017/09/13 14:30:22 by nguintin         ###   ########.fr       */
+/*   Created: 2017/09/13 14:12:23 by nguintin          #+#    #+#             */
+/*   Updated: 2017/09/13 14:12:27 by nguintin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrev(char *str)
-{
-	int tmp;
-	int b;
-	int c;
+void	ft_putchar(char c);
 
-	c = 0;
-	b = 0;
-	while (str[c])
-		c++;
-	c--;
-	while (b < c)
+void	ft_putstr(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		tmp = str[b];
-		str[b] = str[c];
-		str[c] = tmp;
-		c--;
-		b++;
+		ft_putchar(str[i]);
+		i++;
 	}
-	return (str);
 }

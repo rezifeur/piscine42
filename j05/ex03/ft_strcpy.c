@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrev.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nguintin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/05 17:05:15 by nguintin          #+#    #+#             */
-/*   Updated: 2017/09/13 14:30:22 by nguintin         ###   ########.fr       */
+/*   Created: 2017/09/13 16:35:28 by nguintin          #+#    #+#             */
+/*   Updated: 2017/09/13 17:05:32 by nguintin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrev(char *str)
+char	*ft_strcpy(char *dest, char *src)
 {
-	int tmp;
-	int b;
-	int c;
+	int i;
 
-	c = 0;
-	b = 0;
-	while (str[c])
-		c++;
-	c--;
-	while (b < c)
+	i = 0;
+	while (src[i] != '\0')
 	{
-		tmp = str[b];
-		str[b] = str[c];
-		str[c] = tmp;
-		c--;
-		b++;
+		dest[i] = src[i];
+		i++;
 	}
-	return (str);
+	dest[i] = '\0';
+	return (dest);
 }

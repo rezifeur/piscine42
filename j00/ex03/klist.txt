@@ -1,0 +1,7 @@
+Credentials cache: API:01126A16-29D4-4791-911B-B23D110AFE5C
+        Principal: nguintin@42.FR
+
+  Issued                Expires               Principal
+Aug 28 15:12:19 2017  Sep  4 15:12:19 2017  krbtgt/42.FR@42.FR
+Aug 28 15:12:20 2017  Sep  4 15:12:19 2017  ldap/ldap-proxy.42.fr@42.FR
+Aug 28 15:12:21 2017  Sep  4 15:12:19 2017  HTTP/student-storage-2.42.fr@42.FR

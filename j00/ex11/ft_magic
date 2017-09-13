@@ -1,0 +1,2 @@
+find . -type f -name '*.42' -size 42b
+FOUND

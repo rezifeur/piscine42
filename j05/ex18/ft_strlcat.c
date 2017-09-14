@@ -12,27 +12,29 @@
 
 #include <stdio.h>
 #include <string.h>
+
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	int 			i;
-	int				j;
-	unsigned int	k;
+	unsigned int	i;
+	unsigned int	dest_size;
+	unsigned int	src_size;
 
 	i = 0;
-	j = 0;
-	k = 0;
 	while (dest[i] != '\0')
 		i++;
-	while (src[j] != '\0' && j < size)
-	{
-		dest[i] = src[j];
+	dest_size = i;
+	i = 0;
+	while (src[i] != '\0')
 		i++;
-		j++;
+	src_size = i;
+	i = 0;
+	while (src[i] != '\0' && ((dest_size + i) < (size - 1)))
+	{
+		dest[dest_size + i] = src[i];
+		i++;
 	}
-	dest[i] = '\0';
-	while (dest[k] != '0')
-		k++;
-	return (k);
+	dest[dest_size + i] = '\0';
+	return (src_size + ((dest_size < size) ? dest_size : size));
 }
 
 int		main(void)
@@ -42,7 +44,6 @@ int		main(void)
 	char str3[] = "lol";
 	char str4[] = "mdr";
 
-	printf("%u\n", ft_strlcat(str1, str2, 2));
-	printf("%lu", strlcat(str3, str4, 2));
+	printf("%u\n", ft_strlcat(str1, str2, 3));
 	return 0;
 }

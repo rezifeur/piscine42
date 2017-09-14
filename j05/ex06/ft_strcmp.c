@@ -6,11 +6,10 @@
 /*   By: nguintin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/13 17:39:54 by nguintin          #+#    #+#             */
-/*   Updated: 2017/09/13 18:30:51 by nguintin         ###   ########.fr       */
+/*   Updated: 2017/09/14 14:27:28 by nguintin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
-#include <stdio.h>
+
 int		ft_strcmp(char *s1, char *s2)
 {
 	int	cmp;
@@ -28,19 +27,4 @@ int		ft_strcmp(char *s1, char *s2)
 		else
 			return (cmp);
 	}
-}
-
-int		main(void)
-{
-	char ss1[10] = "abcdefghiJ";
-	char ss2[10] = "abcdefghiJ";
-	char ss3[10] = "abcdefghiJ";
-	
-	int ret;
-
-	ret = ft_strcmp(ss1, ss2);
-	printf("%d\n", ret);
-	ret = strcmp(ss2, ss3);
-	printf("%d", ret);
-	return (0);
 }

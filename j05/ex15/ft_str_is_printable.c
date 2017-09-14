@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nguintin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/13 18:37:49 by nguintin          #+#    #+#             */
-/*   Updated: 2017/09/14 14:26:18 by nguintin         ###   ########.fr       */
+/*   Created: 2017/09/14 18:41:34 by nguintin          #+#    #+#             */
+/*   Updated: 2017/09/14 18:50:21 by nguintin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strncmp(char *s1, char *s2, unsigned int n)
+int		ft_str_is_printable(char *str)
 {
 	int i;
-	int cmp;
 
 	i = 0;
-	cmp = 0;
-	while (1 != 2)
+	while (str[i] != '\0')
 	{
-		cmp += (s1[i] - s2[i]);
-		if (i >= n)
-			return (cmp);
-		if (s1[i] == s2[i] && s2[i] == '\0')
-			return (cmp);
-		if (s1[i] == s2[i])
+		if (str[i] >= 33 && str[i] < 127)
 			i++;
 		else
-			return (cmp);
+			return (0);
 	}
+	return (1);
 }

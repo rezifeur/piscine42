@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nguintin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/13 18:37:49 by nguintin          #+#    #+#             */
-/*   Updated: 2017/09/14 14:26:18 by nguintin         ###   ########.fr       */
+/*   Created: 2017/09/14 19:35:15 by nguintin          #+#    #+#             */
+/*   Updated: 2017/09/14 20:07:56 by nguintin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strncmp(char *s1, char *s2, unsigned int n)
+char	*ft_strncat(char *dest, char *src, int nb)
 {
 	int i;
-	int cmp;
+	int j;
 
 	i = 0;
-	cmp = 0;
-	while (1 != 2)
+	j = 0;
+	while (dest[i] != '\0')
 	{
-		cmp += (s1[i] - s2[i]);
-		if (i >= n)
-			return (cmp);
-		if (s1[i] == s2[i] && s2[i] == '\0')
-			return (cmp);
-		if (s1[i] == s2[i])
-			i++;
-		else
-			return (cmp);
+		i++;
 	}
+	while (src[j] != '\0' && j < nb)
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	return (dest);
 }

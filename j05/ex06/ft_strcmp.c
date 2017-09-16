@@ -10,21 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char *s1, char *s2)
 {
-	int	cmp;
-	int	i;
+	int i;
 
 	i = 0;
-	cmp = 0;
-	while (1 != 2)
-	{
-		cmp += (s1[i] - s2[i]);
-		if (s1[i] == '\0' && s2[i] == '\0')
-			return (cmp);
-		if (s1[i] == s2[i])
-			i++;
-		else
-			return (cmp);
-	}
+	while (s1[i] == s2[i] && s1[i] != '\0' && 
+s2[i] != '\0')
+		i++;
+	return (s1[i] - s2[i]);
 }

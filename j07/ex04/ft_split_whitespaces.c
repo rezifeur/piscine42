@@ -1,6 +1,3 @@
-
-#include <stdlib.h>
-
 int	ft_strlen(char *str)
 {
 	int i;
@@ -23,7 +20,7 @@ int	ft_count_words(char *str)
 		return (0);
 	while (str[i])
 	{
-		while (str[i] != ' ' & str[i] != '\t' && str[i] != '\n')
+		while (str[i] != ' ' && str[i] != '\t' && str[i] != '\n')
 		{
 			word = 1;
 			i++;
@@ -58,7 +55,6 @@ char	**ft_split_whitespaces(char *str)
 	int oi;
 	int k;
 	char **out;
-	char *cur_word;
 
 	k	= 0;
 	i	= 0;
@@ -80,11 +76,4 @@ char	**ft_split_whitespaces(char *str)
 		}
 	}
 	return (out);
-}
-
-int	main(void)
-{
-	char src[] = "Bnjouuuuuuuuuuuuuuur c'est moi\ncomment tu vas ?	dis le	moi	si	t'as	mal.";
-	ft_split_whitespaces(src);
-	return 0;
 }

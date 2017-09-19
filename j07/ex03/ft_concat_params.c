@@ -1,21 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_concat_params.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nguintin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/09/19 15:02:16 by nguintin          #+#    #+#             */
+/*   Updated: 2017/09/19 15:03:11 by nguintin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 
-int	ft_strlen(char *str)
+int		ft_strlen(char *str)
 {
 	int i;
 
 	i = 0;
 	while (str[i] != '\0')
 		i++;
-		
 	return (i);
 }
 
 char	*ft_concat_params(int argc, char **argv)
 {
-	int	i;
-	int	l;
-	int	p;
+	int		i;
+	int		l;
+	int		p;
 	char	*out;
 
 	i = 0;

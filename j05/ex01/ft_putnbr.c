@@ -6,11 +6,11 @@
 /*   By: nguintin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/13 14:12:40 by nguintin          #+#    #+#             */
-/*   Updated: 2017/09/19 12:43:34 by nguintin         ###   ########.fr       */
+/*   Updated: 2017/09/19 12:47:50 by nguintin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_putchar(char c);
+void	ft_putchar(char c);
 
 void	ft_putnbr(int nb)
 {
@@ -24,7 +24,7 @@ void	ft_putnbr(int nb)
 	else if (nb < 0)
 	{
 		ft_putchar('-');
-		nb = nb * - 1;
+		nb = nb * -1;
 	}
 	if (nb >= 10)
 	{

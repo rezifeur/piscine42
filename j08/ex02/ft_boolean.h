@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_boolean.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nguintin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/14 19:35:15 by nguintin          #+#    #+#             */
-/*   Updated: 2017/09/19 14:44:18 by nguintin         ###   ########.fr       */
+/*   Created: 2017/09/19 21:09:30 by nguintin          #+#    #+#             */
+/*   Updated: 2017/09/19 21:34:45 by nguintin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, int nb)
-{
-	int i;
-	int j;
+#ifndef FT_BOOLEAN_H
+# define FT_BOOLEAN_H
 
-	i = 0;
-	j = 0;
-	while (dest[i])
-		i++;
-	dest[i] = ' ';
-	while (src[j] && i < nb)
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
+# include <unistd.h>
+
+# define EVEN(x) (!((x) % 2))
+# define TRUE	1
+# define FALSE	0
+# define SUCCESS	0
+# define ODD_MSG	"I have an odd number of arguments.\n"
+# define EVEN_MSG "I have an even number of arguments.\n"
+
+typedef int	t_bool;
+#endif
